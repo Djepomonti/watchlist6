@@ -1,0 +1,13 @@
+<%= @list.name %>
+<%= link_to "Add a bookmark", new_list_bookmark_path(@list) %>
+<div class="grille">
+<% @bookmarks.each do |bookmark| %>
+
+<div class="carte">
+  <img src="https://image.tmdb.org/t/p/original<%= bookmark.movie.poster_url %>">
+  <div class="titre"><%= bookmark.movie.title %></div>
+  <div class="comment"><%= bookmark.movie.overview %></div>
+</div>
+
+<% end %>
+</div>
